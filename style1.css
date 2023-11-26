@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.ins {
+    margin-top:50px  ;
+    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ins .contenu{
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 500px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    padding: 10px;
+}
+.ins .contenu p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0,35px; 
+    margin: 20px 0;
+}
+
+.ins .contenu button{
+    background-color: #2e73da;
+    border-radius: 8px;
+    padding: 10px 45px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0,5px;
+    font-size: 12px;
+    border: 1px solid transparent;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.ins .contenu button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+.ins .contenu form{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ins .contenu .Inscription-rigth, .contenu .Inscription-left{
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+}
+.ins .contenu form label{
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600; 
+}
+.ins .contenu form input{
+    margin: 8px 0;
+    outline: 0;
+    border: none;
+    font-size: 13px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 15px ;
+    background-color: #eee;
+}
+.ins .contenu form select{
+    margin: 8px 0;
+    outline: 0;
+    border: none;
+    font-size: 13px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 15px ;
+    background-color: #eee;
+    transition: all 0.6s ease-in-out;
+}
+
+.ins .contenu form input:focus , select:focus {
+    border: 1px solid #2961d9;
+}
+.ins .contenu .formulaire-Inscription {
+    position: absolute;
+    top : 0; 
+    height: 100%;
+    transition: all 0.6s ease-out;
+    
+}
+.ins .register2{
+    left: 0;
+    width: 55%;
+    z-index: 2;
+}
+.ins .contenu.active .register2{
+    transform: translateX(100%);
+}
+.ins .register1{
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+.ins .contenu.active .register1{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+@keyframes move{
+    0% ,49.99%{
+        opacity : 0; 
+        z-index: 1;
+    }
+    50%,100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.ins .basculer-contenu{
+    position: absolute;
+    top: 0;
+    left: 55%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 150px 0 0 100px;
+    transform: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+.ins .contenu.active .basculer-contenu{
+    transform: translateX(-116%);
+    border-radius: 0px 150px 100px 0px;
+
+}
+.ins .basculer{
+    background-color: #2e73da;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    left: -105% ;
+    height: 100%;
+    width:200%;
+    transform: translateX(0);
+    background: linear-gradient(to right, #5C6BC0, #2e73da);
+}
+
+.ins .contenu.active .basculer{
+    transform: translateX(50%);
+}
+.ins .basculer_texte{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top : 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    
+}
+.ins .left{
+    transform: translateX(-200%);
+}
+.ins .contenu.active .left{
+    transform: translateX(0);
+}
+.ins .right{
+    right: 0;
+    transform: translateX(0);
+}
+.ins .contenu.active .right{
+    transform: translateX(200);
+}
+.ins #contenu{
+    animation: animate 5.8s ease-in-out forwards;
+}
+@keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+footer {
+    background-color: rgba(0,0,0,0.05);
+}
+footer .services_list {
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service img {
+    width: 40px;
+    background-color: #274bae;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+.service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px auto;
+}
+.service  p {
+    color: #333;
+}
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 2px;
+    width: 100%;
+}
+.footer_text {
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 0;
+}
+.footer_text span {
+    color: rgb(41, 39, 174);
+}
